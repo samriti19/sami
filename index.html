@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow'
+rel='stylesheet' type='text/css'>
+<style>
+body{
+  font-family: cursive,sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background-image: url("http://i.imgur.com/KMD8zEC.jpg");
+  background-position: center;
+  background-size: cover;
+  }
+  div  {
+    height:200px;
+    background-size: cover;
+    position: relative;
+    margin: 40px 0 0 0;
+    border-radius: 15px;
+  }
+  h1{
+    font-family: 'Londrina Shadow',cursive;
+    text-align: center;
+    font-size: 80px;
+    color: red;
+    margin: 60px 0 0 0;
+  }
+  h2{
+    text-align: center;
+    color: orange;
+    margin: 0px 0px 70px 0px;
+  }
+  p{
+    color: rgba(255,225,225,1);
+    background: black;
+    background: linear-gradient(bottom, rgba(0,0,0,1),rgba(0,0,0,.4));
+    background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+    padding: 10px;
+    line-height: 20px;
+    text-align: justify;
+    position: absolute;
+    bottom: 0;
+    margin:0;
+    transition: height .5s;
+    -webkit-transition: height .5s;
+    -moz-transition: height .5s;
+  }
+  small{
+    opacity: 0;
+  }
+  .show-description p{
+    height: 150px;
+  }
+  .show-description small{
+    opacity: 1;
+  }
+
+  .first{
+    background-image: url("http://i.imgur.com/MzBnaRg.jpg");
+  }
+  .second{
+    background-image: url("http://i.imgur.com/JDRvjgQ.jpg");
+  }
+.drink{
+  background-image:url("http://i.imgur.com/CnafvSP.jpg")
+  }
+  .price{
+    float: right;
+  }
+  @media (max-width:500px) {
+    h1{
+      font-size: 50px;
+      margin-top: 20px;
+      line-height: 40px;
+    }
+    h2{
+      font-size: 20px;
+      margin: 20px 0 30px 0;
+    }
+    div{
+      margin: 20px 12px 0 12px;
+    }
+    p{
+      font-size: 20px;
+      line-height: 24px;
+    }
+    small{
+      font-size: 16px;
+    }
+  }
+  </style>
+
+</head>
+
+<body>
+<h1>Coffee Cafe</h1>
+<h2> A USA Cafeteria</h2>
+<div class="first">
+<p>Cafe-Latte <span class="price">Rs.100</span><br />
+<small>espresso based drink with steamed milk and micro-foam.</small>
+</p>
+</div>
+<div class="second show-description">
+<p>Cappuccino <span class="price">Rs.150</span><br />
+<small>cappuccino has more foam and choco placed on top of drink than
+latte.</small>
+</p>
+</div>
+<div class="drink">
+<p>Flat White <span class="price">Rs.170</span><br />
+<small>coffee made with the same as cappuccino don't have any foam
+or choco on top.</small>
+</p>
+</div>
+<script>
+$('div').on('click',function() {
+  $(this).toggleClass('show-description');
+});
+</script>
+
+</body>
